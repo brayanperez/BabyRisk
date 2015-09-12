@@ -4,23 +4,44 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
 
-    <h:head>
+    <h:head>  
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <h:outputStylesheet name="./css/default.css"/>
-        <h:outputStylesheet name="./css/cssLayout.css"/>
-        <title>Facelets Template</title>
+        <title><ui:insert name="title">BABY_RISK</ui:insert></title>
+        <link rel="stylesheet" href="#{request.contextPath}/resources/css/normalize.css"/>
+        <link rel="stylesheet" href="#{request.contextPath}/resources/css/style.css"/>
+        <meta name="viewport" content="width=device-width,minium-scale=1 maxium-scale=1"/>
+        <script src="js/jquery-2.1.1.min.js" type="text/javascript" ></script>    
     </h:head>
-
+    
     <h:body>
+        <header>
+            <div id="cont_actionbar">
+                <img id="img_logo" src="resources/imagenes/babylogo.png"/>
 
-        <div id="top" class="top">
-            <ui:insert name="top">Top</ui:insert>
-        </div>
+                <form id="form_login">
+                    <input class="text_head" type="email" placeholder="Correo" />
+                    <input class="text_head" type="password" placeholder="Contraseña"/>
+                    <button class="text_head"  type="submit">Ingresar</button>
+                </form>  
+            </div>  
+        </header>
+        
+        <ui:insert name="content">
+            content
+        </ui:insert>
+        
+        <footer>
+            <h2> conócenos</h2>
 
-        <div id="content" class="center_content">
-            <ui:insert name="content">Content</ui:insert>
-        </div>
+            <a href="http://twitter.com/AQUI_TU_USUARIO" target="_blank"><img src="https://lh6.googleusercontent.com/-IvssUOIxeho/T6Px1qpUA0I/AAAAAAAAAww/IN5WdKCFWcQ/s48/twitter48.png" /></a>
+            <a href="http://www.facebook.com/AQUI_TU_PAGINA" target="_blank"><img alt="Siguenos en Facebook" src="https://lh3.googleusercontent.com/-p36RQiaNpZU/T6P5QFjPz_I/AAAAAAAAAxI/QLR60pfni-s/s48/facebook48.png"  /></a>
+            <a href="URL_DE_TU_PERFIL_INSTRAGRAM" target="_blank"><img alt="Siguenos en Blogger" src="https://lh3.googleusercontent.com/-ZNdcR7k-G-Y/UIqEfiRWw5I/AAAAAAAABf0/Xntq3EpZRqY/s48/instagram48.png" /></a>
+            <a href="https://www.youtube.com/watch?v=Mw9iuRWfy3E" target="_blank"><img alt="Siguenos en YouTube" src="https://lh6.googleusercontent.com/-oXE9dKm36w0/T6VMYqB2pBI/AAAAAAAAAy0/ROjPLna4s_w/s48/youtube48.png"  /></a>
 
+        </footer>
+        
+         <script src="js/efectos.js" type="text/javascript" ></script>
+        
     </h:body>
 
 </html>
