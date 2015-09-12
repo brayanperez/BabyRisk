@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+    <body>
+
+        <ui:composition template="/WEB-INF/template.xhtml">
+
+            <ui:define name="content">
+                <form jsf:id="createUsuarioForm">
+            <input type="text"
+                   placeholder="idUsuario"
+                   required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.idUsuario}">
+            </input>
+            
+            
+            <input type="text"
+                   placeholder="nombres"
+                   required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.nombres}">
+            </input>
+                    
+            <input type="text"
+                   placeholder="apellidos"
+                   required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.apellidos}">
+            </input>
+                    
+            <input type="text"
+                   placeholder="email"
+                   required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.email}">
+            </input>
+                    
+            <input type="text"
+                   placeholder="contrasenia"
+                   required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.contrasenia}">
+            </input>
+                    
+            <input type="text"
+                   placeholder="sexo"
+                   required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.sexo}">
+            </input>
+                    
+            <input type="text"
+                   placeholder="fechaNacimiento"
+                   required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.fechaNacimiento}">
+            </input>
+                    
+            <input type="number"
+                   placeholder="nitEmpresa"
+                   required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.nitEmpresa}">
+            </input>
+                    
+            <input type="text"
+                   placeholder="nombres"
+                   required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.tipoEmpresa}">
+            </input>
+                    
+                    
+            <input type="text"
+                   placeholder="razonSocial"
+                   required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.razonSocial}">
+            </input> 
+                    
+            <input type="text"
+                   placeholder="representanteLegal"
+                   required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.representanteLegal}">
+            </input>
+             
+            <input type="text"
+                   placeholder="direccionEmpresa"
+                   required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.direccionEmpresa}">
+            </input>
+             
+            <input type="text"
+                   placeholder="telefonoEmpresa"
+                   required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.telefonoEmpresa}">
+            </input>
+                    
+            <br></br><br></br>
+            <button type="submit"
+                    jsf:actionListener="#{usuarioController.create}"
+                   jsf:action="List">
+            Guardar
+            </button>
+            <button type="button"
+                    jsf:outcome="List">
+            Cancelar
+            </button>
+            
+        </form>
+       </ui:define>
+     </ui:composition>
+   </body>
+</html>

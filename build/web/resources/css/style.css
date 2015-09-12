@@ -1,0 +1,319 @@
+
+*{
+	margin: 0;
+	padding: 0;
+        
+        
+
+}
+body{
+     margin: 0px;
+     background-color: #f9f9f9;
+     
+     
+}
+
+#cont_actionbar{
+    background: #8bc8ff;
+    width: 100%; 
+    height: 100px;
+}
+
+#img_logo{
+    width:20%;
+    height: 9%;
+    position: absolute;
+    padding: 4px;
+}
+
+
+
+#form_login{
+    padding-top: 27px;
+    text-align: right;
+    
+}
+
+.text_head{
+    color: #000;
+    text-align: left;
+}
+
+#form_login > button{
+    margin-right: 5px
+}
+
+#cont_home{
+    width: 85%;
+    background: #f9f9f9;
+    height: 650px;
+    float: left;
+    text-align: center;
+}
+.menu_bar{
+    display: block;
+    
+}
+#cont_registro{
+    width: 15%;
+    background: #f9f9f9;
+    height: 650px;
+    float: right;
+    text-align: center;
+    
+    }  
+.regist_empresa, .regist_persona{
+    display: none;
+    max-width: 200px;
+    margin-top: 10px;
+    
+
+
+}
+
+
+footer{
+    background: #8bc8ff;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+
+}
+.btn-form{
+    margin: 10px;
+    padding: 15px;
+    border-radius: 40%;
+    border:2px solid white;
+    
+
+    }
+
+#but_per, #but_emp{
+  
+   background-color: #8bc8ff;
+}
+.Main_Menu{
+    position: fixed;
+    z-index: 2000;
+    text-align:left;
+    left: 0 ;
+    margin: 0;
+    padding: 0;
+    background: #8bc8ff;
+    height:40%;
+    width:10%;
+    border-radius: 0em  2em 2em 0em;
+    margin-top: 2%;
+}
+
+
+.MainMenu-list{
+	overflow: hidden;
+	list-style: none;
+
+}
+.MainMenu-item{
+	float: left;
+        display: block;
+	float: none;
+	border-bottom: 2px solid rgba(255,255,255,.3);
+        
+}
+.MainMenu-link{
+	color: #fff;
+	padding: 20px;
+	display: block;
+	text-decoration: none;
+        width: 90%;
+        height: 90%;
+            
+       
+           -webkit-transition:all .5s ease;
+   -o-transition: all .5s ease;
+   transition:all .5s ease ;
+}
+.MainMenu-link:hover{
+    background: #037e8c;
+}
+
+.Form{
+    margin-bottom: 2em;
+    text-align: center;
+    padding: .5em;
+    border: 2px solid black;
+    border-radius: 1em;
+}
+
+.Footer-formInput{
+    padding: .5em;
+    border: 2px solid black;
+    border-radius: 1em;
+    margin-bottom: 2em;
+}
+
+#img_home{
+    
+    width: 50%;
+    height:80%;
+    
+    padding: 40px;
+
+}
+
+
+
+.btn-form:hover{
+    width:100px;
+    height:50px;
+    color: red;
+    background: #d2d2d2;
+    cursor: pointer;
+    box-shadow:2px 2px 20px #000;
+  
+    
+}
+
+
+.botones{
+    text-align: center;
+    border-bottom: 1px dashed #0C83A4;
+    color: #0C83A4;
+    font-size: 100%;  
+}
+	
+.menu_bar{
+    display: none;
+}
+    
+
+          
+
+        
+
+    
+
+/*responsive designtable*/ 
+@media screen and (max-width:1000px ){
+ 
+     #img_logo{
+		
+        width: 25%;
+        height: 9%;
+       
+        
+        
+	
+}
+.text_head{
+    width: 20%;
+    font-size: 100%;
+}
+#img_home{
+    width: 50%;
+    height: 70%;
+    padding: 0;
+    
+}
+
+
+
+.botones{
+    text-align: center;
+    border-bottom: 1px dashed #0C83A4;
+    color: #0C83A4;
+    font-size: 70%; 
+}
+
+.btn-form:hover{
+    width:40%;
+    height:40%;
+    border-radius:40%;
+    color: red;
+    background: #d2d2d2;
+    cursor: pointer;
+    box-shadow:2px 2px 20px #fff;
+    
+}
+
+
+.MainMenu-list{
+	
+      margin: 5px;
+      padding: 5px;
+      list-style: none;
+}
+.MainMenu-link{
+   display: inline-block;
+   text-decoration: none;
+   color: white;
+   font-size: 80%;
+   font-weight: bold
+       
+   -webkit-transition all 1.5s ease;
+   -o-transition: all 1.5s ease;
+   transition:all 1.5s ease ;
+
+}
+.MainMenu-link:hover{
+    padding: 0px 0px;
+    background: white;
+    font-size: 12px;
+    background-color: black
+   
+}
+#cont_home, #cont_registro{
+    height: 500px
+}
+
+
+
+}
+
+    
+
+
+/*responsive designcelular*/ 
+@media screen and (max-width:500px ){
+   
+    
+   
+  #cont_home{
+       
+     width: 100%;
+     height: 400px
+  }
+        
+            
+        
+   #cont_registro{
+      width: 100%;
+     height: 100%  
+       
+         
+    }
+
+ .menu_bar{
+   
+        width: 30%;
+        display: block;
+   }
+   .Main_Menu{
+   
+    background: #8bc8ff;
+    opacity: 0.40;
+    height:70%;
+    width: 50%;
+    
+    }
+    .MainMenu-link{
+	color: #000;
+        
+    }
+}
+
+
+
+  
+  
+
+
