@@ -3,66 +3,83 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
 
     <ui:composition template="templates/template.xhtml">
         <ui:define name="title">BABYRISK</ui:define>
         <ui:define name="content">
-            <section>
 
-                <div id="cont_registro">
+            <section id="cont_registro">
 
-                    <article class="botones" >
-                        <h1> Registrarse </h1>
-                        <button id="but_per"  class="btn-form" type="submit">Persona</button>
-                        <button id="but_emp" class="btn-form" type="submit" >Empresa</button>  
+                <article class="botones" >
+                    <h1> Registrarse </h1>
+                    <button id="but_per"  class="btn-form" type="submit">Persona</button>
+                    <button id="but_emp" class="btn-form" type="submit" >Empresa</button>  
 
-                    </article>
+                </article>
 
-                    <form class="regist_empresa" >
+                <form class="regist_empresa" >
 
-                        <input class="Form" type="text" placeholder="Representante legal" />  
-                        <input class="Form"  type="text" placeholder="Razon social" />
-                        <input class="Form" type="email" placeholder="Email" />
-                        <input class="Form" type="password" placeholder="Contraseña"/>
-                        <input class="Form" type="password" placeholder="Repetir contraseña"/>                    
-                        <input class="Form" type="password" placeholder="Direccion"/>                    
+                    <input class="Form" type="text" placeholder="Representante legal" />  
+                    <input class="Form"  type="text" placeholder="Razon social" />
+                    <input class="Form" type="email" placeholder="Email" />
+                    <input class="Form" type="password" placeholder="Contraseña"/>
+                    <input class="Form" type="password" placeholder="Repetir contraseña"/>                    
+                    <input class="Form" type="password" placeholder="Direccion"/>                    
 
-                        <button type="submit">registrar</button>
-                    </form> 
-                    <form class="regist_persona">
+                    <button type="submit">registrar</button>
+                </form> 
+                <form class="regist_persona">
+                    
+                    <input class="Form" type="text" placeholder="Nombres" required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.nombres}"/> 
+                    
+                    <input class="Form"  type="text" placeholder="Apellidos" required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.apellidos}"/>
+                    
+                    <input class="Form" type="text" placeholder="Alias" required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.idUsuario}"/> 
+                    
+                    <input class="Form" type="tex" placeholder="Sexo" requiered="true"
+                   jsf:value="#{usuarioController.selecteUsuario.sexo}"/>
+                    
+                    <input class="Form" type="email" placeholder="Email" required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.email}"/>
+                    
+                    <input class="Form" type="password" placeholder="Contraseña" required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.contrasenia}"/>
+                    
+                    <input class="Form" type="password" placeholder="Repetir contraseña" required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.contrasenia}"/>
+                    
+                    <input type="date" placeholder="fecha_nacimiento" required="true"
+                   jsf:value="#{usuarioController.selecteUsuario.fechaNacimiento}">
+                        <convertDateTime pattern="yyyy-MM-dd"/>
+                    </input>
 
-                        <input class="Form" type="text" placeholder="Nombre" />  
-                        <input class="Form"  type="text" placeholder="Apellido" />
-                        <input class="Form" type="email" placeholder="Email" />
-                        <input class="Form" type="password" placeholder="Contraseña"/>
-                        <input class="Form" type="password" placeholder="Repetir contraseña"/>  
-                        <input type="date" placeholder="fecha_nacimiento" requiered="true">
-                            <convertDateTime pattern="yyyy-MM-dd"/>
-                        </input>
 
+                    <button type="submit">Aceptar</button>
+                </form> 
 
-                        <button type="submit">Aceptar</button>
-                    </form> 
-                </div>
                 <div  id="cont_home">
-                <button class ="menu_bar" type="submit">Menu</button>
+                    <button class ="menu_bar" type="submit">Menu</button>
 
-                <nav class="Main_Menu"> 
+                    <nav class="Main_Menu"> 
 
-                    <ul class="MainMenu-list"> 
-                        <li class="MainMenu-item"><a href="inicio" class="MainMenu-link" >Home</a></li>
-                        <li class="MainMenu-item"><a href="quien" class="MainMenu-link">¿Quienes somos?</a></li>
-                        <li class="MainMenu-item"><a href="objetivo" class="MainMenu-link">Objetivo</a></li>
-                        <li class="MainMenu-item"><a href="...." class="MainMenu-link">Productos</a></li>
-                        <li class="MainMenu-item"><a href="..." class="MainMenu-link">Empresas</a></li>
+                        <ul class="MainMenu-list"> 
+                            <li class="MainMenu-item"><a href="inicio" class="MainMenu-link" >Home</a></li>
+                            <li class="MainMenu-item"><a href="quien" class="MainMenu-link">¿Quienes somos?</a></li>
+                            <li class="MainMenu-item"><a href="objetivo" class="MainMenu-link">Objetivo</a></li>
+                            <li class="MainMenu-item"><a href="...." class="MainMenu-link">Productos</a></li>
+                            <li class="MainMenu-item"><a href="..." class="MainMenu-link">Empresas</a></li>
 
-                    </ul>
-                </nav>
-               <p>BabyRisk ayuda a proterger y cuidar a tu bebé de forma inteligente y segura</p>
-                <img id="img_home" src="resources/imagenes/baby.jpg"/>
-            </div>
-                
+                        </ul>
+                    </nav>
+                    <p>BabyRisk ayuda a proterger y cuidar a tu bebé de forma inteligente y segura</p>
+                    <img id="img_home" src="resources/imagenes/baby.jpg"/>
+                </div>
+
 
             </section>
         </ui:define>

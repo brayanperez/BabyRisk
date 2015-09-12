@@ -6,12 +6,12 @@
 
     <body>
 
-        <ui:composition template="/WEB-INF/template.xhtml">
+        <ui:composition template="templates/template.xhtml">
 
             <ui:define name="content">
                 <form jsf:id="createUsuarioForm">
             <input type="text"
-                   placeholder="idUsuario"
+                   placeholder="Alias"
                    required="true"
                    jsf:value="#{usuarioController.selecteUsuario.idUsuario}">
             </input>

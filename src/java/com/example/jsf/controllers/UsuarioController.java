@@ -1,10 +1,11 @@
+
 package com.example.jsf.controllers;
 
 
 import com.example.jpa.entities.Usuario;
 import com.example.jpa.sessions.UsuarioSession;
 import java.util.List;
-import javax.annotation.ManagedBean;
+import javax.faces.bean.ManagedBean;
 import javax.ejb.EJB;
 import javax.faces.bean.ViewScoped;
 
